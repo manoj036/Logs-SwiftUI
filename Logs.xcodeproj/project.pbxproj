@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */; };
 		91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */; };
 		91C1FC31245DC3A600D54CC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC30245DC3A600D54CC1 /* ViewController.swift */; };
-		91C1FC34245DC3A600D54CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC32245DC3A600D54CC1 /* Main.storyboard */; };
 		91C1FC36245DC3A800D54CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC35245DC3A800D54CC1 /* Assets.xcassets */; };
 		91C1FC39245DC3A800D54CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */; };
 		91C1FC44245DC3A800D54CC1 /* LogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC43245DC3A800D54CC1 /* LogsTests.swift */; };
 		91C1FC4F245DC3A800D54CC1 /* LogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC4E245DC3A800D54CC1 /* LogsUITests.swift */; };
+		91C1FC5E245DDA0300D54CC1 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 91C1FC5D245DDA0300D54CC1 /* EasyPeasy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		91C1FC30245DC3A600D54CC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91C1FC33245DC3A600D54CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91C1FC35245DC3A800D54CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C1FC38245DC3A800D54CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C1FC3A245DC3A800D54CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C1FC5E245DDA0300D54CC1 /* EasyPeasy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,6 @@
 				91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */,
 				91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */,
 				91C1FC30245DC3A600D54CC1 /* ViewController.swift */,
-				91C1FC32245DC3A600D54CC1 /* Main.storyboard */,
 				91C1FC35245DC3A800D54CC1 /* Assets.xcassets */,
 				91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */,
 				91C1FC3A245DC3A800D54CC1 /* Info.plist */,
@@ -144,6 +143,9 @@
 			dependencies = (
 			);
 			name = Logs;
+			packageProductDependencies = (
+				91C1FC5D245DDA0300D54CC1 /* EasyPeasy */,
+			);
 			productName = Logs;
 			productReference = 91C1FC29245DC3A600D54CC1 /* Logs.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +218,9 @@
 				Base,
 			);
 			mainGroup = 91C1FC20245DC3A600D54CC1;
+			packageReferences = (
+				91C1FC5C245DDA0300D54CC1 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
+			);
 			productRefGroup = 91C1FC2A245DC3A600D54CC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,7 +239,6 @@
 			files = (
 				91C1FC39245DC3A800D54CC1 /* LaunchScreen.storyboard in Resources */,
 				91C1FC36245DC3A800D54CC1 /* Assets.xcassets in Resources */,
-				91C1FC34245DC3A600D54CC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		91C1FC32245DC3A600D54CC1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91C1FC33245DC3A600D54CC1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -590,6 +586,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91C1FC5C245DDA0300D54CC1 /* XCRemoteSwiftPackageReference "EasyPeasy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:nakiostudio/EasyPeasy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91C1FC5D245DDA0300D54CC1 /* EasyPeasy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91C1FC5C245DDA0300D54CC1 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
+			productName = EasyPeasy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91C1FC21245DC3A600D54CC1 /* Project object */;
 }
