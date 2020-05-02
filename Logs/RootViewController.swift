@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  Logs
 //
 //  Created by manoj.gubba on 2020/05/02.
@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import EasyPeasy
 
-class ViewController: UIViewController {
+class RootViewController: UIViewController {
+
+    let rootView = RootView()
 
     private var notes = [String]()
-
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.separatorStyle = .none
-        return tableView
-    }()
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -27,9 +22,12 @@ class ViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func loadView() {
+        view = rootView
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
 
         title = "Logs"
         setupAddButton()
@@ -43,37 +41,29 @@ class ViewController: UIViewController {
 
     @objc private func addNote() {
         let title = "Add new note"
-        let sheet = UIAlertController(
-            title: title,
-            message: nil,
-            preferredStyle: .alert
-        )
-        sheet.addTextField {
-            $0.placeholder = "Buy a Chocolate"
-        }
-        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        sheet.addAction(
-            UIAlertAction(title: "Add", style: .default, handler: { _ in
-                if let text = sheet.textFields?.first?.text {
-                    self.notes.append(text)
-                    self.tableView.reloadData()
-                }
-            })
-        )
-        present(sheet, animated: true)
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        alert.addTextField { $0.placeholder = "Buy a Chocolate" }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let addAction = UIAlertAction(title: "Add", style: .default, handler: { _ in
+            if let text = alert.textFields?.first?.text {
+                self.notes.append(text)
+                self.rootView.tableView.reloadData()
+            }
+        })
+
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
+        present(alert, animated: true)
     }
 
     private func setupTableView() {
-        view.addSubview(tableView)
-        tableView.easy.layout([
-            Edges(0)
-        ])
-        tableView.dataSource = self
-        tableView.delegate = self
+        rootView.tableView.dataSource = self
+        rootView.tableView.delegate = self
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
     }
