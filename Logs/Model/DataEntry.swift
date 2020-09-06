@@ -12,3 +12,13 @@ struct DataEntry: Identifiable {
     var id = UUID()
     var text: String
 }
+
+struct Page: Identifiable {
+    var id = UUID()
+    var entries: [DataEntry]
+}
+
+struct Book: Identifiable {
+    var id = UUID()
+    var pages: [Page]
+}

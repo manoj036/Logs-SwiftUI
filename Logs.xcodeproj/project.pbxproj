@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		917C1CF72504C61E0010C607 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF62504C61E0010C607 /* DataEntry.swift */; };
+		917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF92504CE840010C607 /* FloatingActionButton.swift */; };
+		917C1CFC2504CF3C0010C607 /* ViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */; };
+		917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CFD2504D2AC0010C607 /* DataEntryList.swift */; };
+		917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1D012504E0B50010C607 /* AddEntryView.swift */; };
+		917C1D052504E3570010C607 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 917C1D042504E3570010C607 /* Introspect */; };
 		91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */; };
 		91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */; };
 		91C1FC31245DC3A600D54CC1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC30245DC3A600D54CC1 /* RootViewController.swift */; };
@@ -20,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		917C1CF62504C61E0010C607 /* DataEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
+		917C1CF92504CE840010C607 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGenerator.swift; sourceTree = "<group>"; };
+		917C1CFD2504D2AC0010C607 /* DataEntryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryList.swift; sourceTree = "<group>"; };
+		917C1D012504E0B50010C607 /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
 		91C1FC29245DC3A600D54CC1 /* Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C1FC5E245DDA0300D54CC1 /* EasyPeasy in Frameworks */,
+				917C1D052504E3570010C607 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +59,16 @@
 				917C1CF62504C61E0010C607 /* DataEntry.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		917C1CF82504CE740010C607 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				917C1CF92504CE840010C607 /* FloatingActionButton.swift */,
+				917C1CFD2504D2AC0010C607 /* DataEntryList.swift */,
+				917C1D012504E0B50010C607 /* AddEntryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		91C1FC20245DC3A600D54CC1 = {
@@ -70,15 +90,17 @@
 		91C1FC2B245DC3A600D54CC1 /* Logs */ = {
 			isa = PBXGroup;
 			children = (
+				917C1CF82504CE740010C607 /* Views */,
 				917C1CF52504C60E0010C607 /* Model */,
 				91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */,
 				91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */,
+				91C1FC5F245DE2B700D54CC1 /* RootView.swift */,
 				91C1FC30245DC3A600D54CC1 /* RootViewController.swift */,
 				91C1FC63245FD72600D54CC1 /* BaseView.swift */,
-				91C1FC5F245DE2B700D54CC1 /* RootView.swift */,
 				91C1FC35245DC3A800D54CC1 /* Assets.xcassets */,
 				91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */,
 				91C1FC3A245DC3A800D54CC1 /* Info.plist */,
+				917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */,
 			);
 			path = Logs;
 			sourceTree = "<group>";
@@ -101,6 +123,7 @@
 			name = Logs;
 			packageProductDependencies = (
 				91C1FC5D245DDA0300D54CC1 /* EasyPeasy */,
+				917C1D042504E3570010C607 /* Introspect */,
 			);
 			productName = Logs;
 			productReference = 91C1FC29245DC3A600D54CC1 /* Logs.app */;
@@ -132,6 +155,7 @@
 			mainGroup = 91C1FC20245DC3A600D54CC1;
 			packageReferences = (
 				91C1FC5C245DDA0300D54CC1 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
+				917C1D032504E3570010C607 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 91C1FC2A245DC3A600D54CC1 /* Products */;
 			projectDirPath = "";
@@ -159,10 +183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917C1CFC2504CF3C0010C607 /* ViewGenerator.swift in Sources */,
+				917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */,
 				917C1CF72504C61E0010C607 /* DataEntry.swift in Sources */,
 				91C1FC60245DE2B700D54CC1 /* RootView.swift in Sources */,
+				917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */,
 				91C1FC31245DC3A600D54CC1 /* RootViewController.swift in Sources */,
 				91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */,
+				917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */,
 				91C1FC64245FD72600D54CC1 /* BaseView.swift in Sources */,
 				91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +386,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		917C1D032504E3570010C607 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 		91C1FC5C245DDA0300D54CC1 /* XCRemoteSwiftPackageReference "EasyPeasy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:nakiostudio/EasyPeasy.git";
@@ -369,6 +405,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		917C1D042504E3570010C607 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 917C1D032504E3570010C607 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
 		91C1FC5D245DDA0300D54CC1 /* EasyPeasy */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 91C1FC5C245DDA0300D54CC1 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
