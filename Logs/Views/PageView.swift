@@ -20,35 +20,33 @@ struct PageView: View {
     @State private var showAddEntryAlert = false
 
     var body: some View {
-        NavigationView {
-            ViewGenerator.addFAB(
-                to: AnyView(DataEntryList(elements: notes)),
-                side: 60,
-                action: {
-                    self.showAddEntryAlert = true
-                }
-            ).popover(isPresented: $showAddEntryAlert, content: {
-                AddEntryView { text in
-                    if let text = text {
-                        let entry = DataEntry(context: managedObjectContext)
-                        entry.text = text
-                        entry.id = UUID()
-                        entry.date = Date()
-                        entry.page = page
+        ViewGenerator.addFAB(
+            to: AnyView(DataEntryList(elements: notes)),
+            side: 60,
+            action: {
+                self.showAddEntryAlert = true
+            }
+        ).popover(isPresented: $showAddEntryAlert, content: {
+            AddEntryView { text in
+                if let text = text {
+                    let entry = DataEntry(context: managedObjectContext)
+                    entry.text = text
+                    entry.id = UUID()
+                    entry.date = Date()
+                    entry.page = page
 
-                        saveContext()
-                    }
-                    self.showAddEntryAlert = false
+                    saveContext()
                 }
-            }).navigationBarTitle(page?.name ?? "")
-        }
+                self.showAddEntryAlert = false
+            }
+        }).navigationBarTitle(page?.name ?? "")
     }
-
+    
     func saveContext() {
-      do {
-        try managedObjectContext.save()
-      } catch {
-        print("Error saving managed object context: \(error)")
-      }
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
     }
 }
