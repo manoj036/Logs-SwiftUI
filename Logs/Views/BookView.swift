@@ -17,33 +17,28 @@ struct BookView: View {
 
     @Environment(\.managedObjectContext) var moc
     @State private var showAddEntryAlert = false
-    @State var page: Page?
+    @State var displayedPage: Page?
 
-    func pageView(for page: Page?) -> some View {
-        PageView(page: page).environment(\.managedObjectContext, moc)
+    var pageView: some View {
+        PageView(page: displayedPage).environment(\.managedObjectContext, moc)
     }
 
     var body: some View {
-        let pushChild = Binding<Bool>(
-            get: {
-                page != nil
-            },
-            set: { _ in page = nil }
-        )
+        let pushChild = Binding<Bool>(get: { displayedPage != nil }, set: { if !$0 {  displayedPage = nil }})
 
-        VStack {
-            NavigationLink(destination: pageView(for: page), isActive: pushChild) {}
+        ZStack {
+            NavigationLink(destination: pageView, isActive: pushChild) {}
             ViewGenerator.addFAB(
                 to: AnyView(
                     List(pages, id: \.id, rowContent: { entry in
                         HStack {
                             Text(entry.name)
                         }.onTapGesture {
-                            page = entry
+                            displayedPage = entry
                         }
                     })
                     .listStyle(GroupedListStyle())
-                    .navigationBarTitle("Book")
+                    .navigationBarTitle("Books")
                 ),
                 side: 60,
                 action: {

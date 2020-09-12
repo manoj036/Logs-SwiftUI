@@ -39,7 +39,7 @@ struct PageView: View {
                 }
                 self.showAddEntryAlert = false
             }
-        }).navigationBarTitle(page?.name ?? "")
+        }).navigationBarTitle("Books > " + (page?.name ?? ""))
     }
 
     func saveContext() {
