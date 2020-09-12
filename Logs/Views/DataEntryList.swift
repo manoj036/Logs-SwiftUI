@@ -15,6 +15,5 @@ struct DataEntryList: View {
             Text(entry.text)
         })
         .listStyle(GroupedListStyle())
-        .navigationBarTitle("List")
     }
 }

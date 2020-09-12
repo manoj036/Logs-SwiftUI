@@ -41,7 +41,7 @@ struct PageView: View {
             }
         }).navigationBarTitle(page?.name ?? "")
     }
-    
+
     func saveContext() {
         do {
             try managedObjectContext.save()
