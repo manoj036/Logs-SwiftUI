@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct FloatingActionButton: View {
-    var side: CGFloat
+    var diameter: CGFloat
     var action: (() -> Void)
     var body: some View {
         VStack {
@@ -20,11 +20,11 @@ struct FloatingActionButton: View {
                     action: action,
                     label: {
                         Image(systemName: "plus")
-                            .font(Font.system(size: side/2))
-                            .frame(width: side, height: side, alignment: .center)
+                            .font(Font.system(size: diameter/2))
+                            .frame(width: diameter, height: diameter, alignment: .center)
                             .foregroundColor(.white)
                 }).background(Color.blue)
-                    .cornerRadius(side/2)
+                    .cornerRadius(diameter/2)
                     .padding(.all, 16)
                     .shadow(color: Color.black.opacity(0.3), radius: 4, x: 3, y: 3)
             }
@@ -35,7 +35,7 @@ struct FloatingActionButton: View {
 struct FAB_previews: PreviewProvider {
     static var previews: some View {
         FloatingActionButton(
-            side: 60,
+            diameter: 60,
             action: {}
         )
     }

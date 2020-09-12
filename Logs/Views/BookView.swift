@@ -28,35 +28,30 @@ struct BookView: View {
 
         ZStack {
             NavigationLink(destination: pageView, isActive: pushChild) {}
-            ViewGenerator.addFAB(
-                to: AnyView(
-                    List(pages, id: \.id, rowContent: { entry in
-                        HStack {
-                            Text(entry.name)
-                        }.onTapGesture {
-                            displayedPage = entry
-                        }
-                    })
-                    .listStyle(GroupedListStyle())
-                    .navigationBarTitle("Books")
-                ),
-                side: 60,
-                action: {
-                    showAddEntryAlert = true
-                }
-            ).popover(isPresented: $showAddEntryAlert, content: {
-                AddEntryView { text in
-                    if let text = text {
-                        let entry = Page(context: moc)
-                        entry.id = UUID()
-                        entry.date = Date()
-                        entry.name = text
-                        saveContext()
-                    }
-                    showAddEntryAlert = false
+            List(pages, id: \.id, rowContent: { entry in
+                HStack {
+                    Text(entry.name)
+                }.onTapGesture {
+                    displayedPage = entry
                 }
             })
-        }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle("Books")
+            FloatingActionButton(diameter: 60, action: {
+                showAddEntryAlert = true
+            })
+        }.popover(isPresented: $showAddEntryAlert, content: {
+            AddEntryView { text in
+                if let text = text {
+                    let entry = Page(context: moc)
+                    entry.id = UUID()
+                    entry.date = Date()
+                    entry.name = text
+                    saveContext()
+                }
+                showAddEntryAlert = false
+            }
+        })
     }
 
     func saveContext() {

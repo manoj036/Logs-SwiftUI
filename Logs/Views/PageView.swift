@@ -20,13 +20,12 @@ struct PageView: View {
     @State private var showAddEntryAlert = false
 
     var body: some View {
-        ViewGenerator.addFAB(
-            to: AnyView(DataEntryList(elements: notes)),
-            side: 60,
-            action: {
+        ZStack {
+            DataEntryList(elements: notes)
+            FloatingActionButton(diameter: 60, action: {
                 self.showAddEntryAlert = true
-            }
-        ).popover(isPresented: $showAddEntryAlert, content: {
+            })
+        }.popover(isPresented: $showAddEntryAlert, content: {
             AddEntryView { text in
                 if let text = text {
                     let entry = DataEntry(context: managedObjectContext)
