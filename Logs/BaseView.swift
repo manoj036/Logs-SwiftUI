@@ -9,7 +9,14 @@
 import SwiftUI
 
 struct BaseView: View {
-    @State private var notes: [DataEntry] = []
+    @FetchRequest(
+      entity: DataEntry.entity(),
+      sortDescriptors: [
+        NSSortDescriptor(keyPath: \DataEntry.date, ascending: true)
+      ]
+    ) var notes: FetchedResults<DataEntry>
+
+    @Environment(\.managedObjectContext) var managedObjectContext
     @State private var showAddEntryAlert = false
 
     var body: some View {
@@ -23,12 +30,25 @@ struct BaseView: View {
             ).popover(isPresented: $showAddEntryAlert, content: {
                 AddEntryView { text in
                     if let text = text {
-                        self.notes.append(DataEntry(text: text))
+                        let entry = DataEntry(context: managedObjectContext)
+                        entry.text = text
+                        entry.id = UUID()
+                        entry.date = Date()
+
+                        saveContext()
                     }
                     self.showAddEntryAlert = false
                 }
             })
         }
+    }
+
+    func saveContext() {
+      do {
+        try managedObjectContext.save()
+      } catch {
+        print("Error saving managed object context: \(error)")
+      }
     }
 }
 

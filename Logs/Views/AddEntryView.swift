@@ -15,23 +15,28 @@ struct AddEntryView: View {
     var body: some View {
         NavigationView {
             List {
-                TextField("Buy onions 🧅", text: $title) {
-                    self.valueChanged?(self.title)
-                }.introspectTextField {
-                    $0.becomeFirstResponder()
-                }
+                TextField(
+                    "Buy onions 🧅",
+                    text: $title,
+                    onCommit: {
+                        self.valueChanged?(self.title)
+                    }
+                )
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Entry")
-            .navigationBarItems(leading:
-                Button(action: {
-                    self.valueChanged?(nil)
-                }, label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.black)
-                }))
+            .navigationBarItems(
+                leading: Button(
+                    action: {
+                        self.valueChanged?(nil)
+                    },
+                    label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.black)
+                    }
+                )
+            )
         }
-        
     }
 }
 

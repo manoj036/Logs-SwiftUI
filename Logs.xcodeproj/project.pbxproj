@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		917C1CF72504C61E0010C607 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF62504C61E0010C607 /* DataEntry.swift */; };
+		917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */; };
 		917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF92504CE840010C607 /* FloatingActionButton.swift */; };
 		917C1CFC2504CF3C0010C607 /* ViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */; };
 		917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CFD2504D2AC0010C607 /* DataEntryList.swift */; };
 		917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1D012504E0B50010C607 /* AddEntryView.swift */; };
 		917C1D052504E3570010C607 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 917C1D042504E3570010C607 /* Introspect */; };
+		919F6676250CACAB00C7ECDA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 919F6675250CACAB00C7ECDA /* .swiftlint.yml */; };
 		91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */; };
 		91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */; };
 		91C1FC31245DC3A600D54CC1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC30245DC3A600D54CC1 /* RootViewController.swift */; };
@@ -24,11 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		917C1CF62504C61E0010C607 /* DataEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
+		917A3CB8250CB09C00B5A26B /* Logs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logs.xcdatamodel; sourceTree = "<group>"; };
 		917C1CF92504CE840010C607 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 		917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGenerator.swift; sourceTree = "<group>"; };
 		917C1CFD2504D2AC0010C607 /* DataEntryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryList.swift; sourceTree = "<group>"; };
 		917C1D012504E0B50010C607 /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
+		919F6675250CACAB00C7ECDA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		91C1FC29245DC3A600D54CC1 /* Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,12 +55,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		917C1CF52504C60E0010C607 /* Model */ = {
+		917A3CBA250CBF9500B5A26B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				917C1CF62504C61E0010C607 /* DataEntry.swift */,
+				917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		917C1CF82504CE740010C607 /* Views */ = {
@@ -90,8 +92,9 @@
 		91C1FC2B245DC3A600D54CC1 /* Logs */ = {
 			isa = PBXGroup;
 			children = (
+				917A3CBA250CBF9500B5A26B /* Models */,
+				919F6675250CACAB00C7ECDA /* .swiftlint.yml */,
 				917C1CF82504CE740010C607 /* Views */,
-				917C1CF52504C60E0010C607 /* Model */,
 				91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */,
 				91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */,
 				91C1FC5F245DE2B700D54CC1 /* RootView.swift */,
@@ -115,6 +118,7 @@
 				91C1FC25245DC3A600D54CC1 /* Sources */,
 				91C1FC26245DC3A600D54CC1 /* Frameworks */,
 				91C1FC27245DC3A600D54CC1 /* Resources */,
+				919F6674250CABCC00C7ECDA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,7 +140,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = manoj.gubba;
 				TargetAttributes = {
 					91C1FC28245DC3A600D54CC1 = {
@@ -171,12 +175,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919F6676250CACAB00C7ECDA /* .swiftlint.yml in Resources */,
 				91C1FC39245DC3A800D54CC1 /* LaunchScreen.storyboard in Resources */,
 				91C1FC36245DC3A800D54CC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		919F6674250CABCC00C7ECDA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91C1FC25245DC3A600D54CC1 /* Sources */ = {
@@ -185,9 +211,9 @@
 			files = (
 				917C1CFC2504CF3C0010C607 /* ViewGenerator.swift in Sources */,
 				917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */,
-				917C1CF72504C61E0010C607 /* DataEntry.swift in Sources */,
 				91C1FC60245DE2B700D54CC1 /* RootView.swift in Sources */,
 				917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */,
+				917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */,
 				91C1FC31245DC3A600D54CC1 /* RootViewController.swift in Sources */,
 				91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */,
 				917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */,
@@ -236,6 +262,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -296,6 +323,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -416,6 +444,20 @@
 			productName = EasyPeasy;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				917A3CB8250CB09C00B5A26B /* Logs.xcdatamodel */,
+			);
+			currentVersion = 917A3CB8250CB09C00B5A26B /* Logs.xcdatamodel */;
+			name = Logs.xcdatamodeld;
+			path = Logs/Models/Logs.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 91C1FC21245DC3A600D54CC1 /* Project object */;
 }
