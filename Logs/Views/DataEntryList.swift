@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct DataEntryList: View {
-    var elements: FetchedResults<DataEntry>
+    var elements: [DataEntry]
     var body: some View {
         List(elements, id: \.id, rowContent: { entry in
             Text(entry.text)

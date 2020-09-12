@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  PageView.swift
 //  Logs
 //
 //  Created by manoj.gubba on 2020/05/04.
@@ -7,16 +7,16 @@
 //
 
 import SwiftUI
+import CoreData
 
-struct BaseView: View {
-    @FetchRequest(
-      entity: DataEntry.entity(),
-      sortDescriptors: [
-        NSSortDescriptor(keyPath: \DataEntry.date, ascending: true)
-      ]
-    ) var notes: FetchedResults<DataEntry>
-
+struct PageView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
+    var page: Page?
+
+    var notes: [DataEntry] {
+        page?.entriesArray ?? []
+    }
+
     @State private var showAddEntryAlert = false
 
     var body: some View {
@@ -34,12 +34,13 @@ struct BaseView: View {
                         entry.text = text
                         entry.id = UUID()
                         entry.date = Date()
+                        entry.page = page
 
                         saveContext()
                     }
                     self.showAddEntryAlert = false
                 }
-            })
+            }).navigationBarTitle(page?.name ?? "")
         }
     }
 
@@ -49,11 +50,5 @@ struct BaseView: View {
       } catch {
         print("Error saving managed object context: \(error)")
       }
-    }
-}
-
-struct BaseView_Previews: PreviewProvider {
-    static var previews: some View {
-        BaseView()
     }
 }

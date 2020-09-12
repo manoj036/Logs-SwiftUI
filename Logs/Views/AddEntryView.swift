@@ -16,7 +16,7 @@ struct AddEntryView: View {
         NavigationView {
             List {
                 TextField(
-                    "Buy onions 🧅",
+                    "Enter Field Name 📝",
                     text: $title,
                     onCommit: {
                         self.valueChanged?(self.title)

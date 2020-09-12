@@ -16,10 +16,13 @@ extension DataEntry {
         return NSFetchRequest<DataEntry>(entityName: "DataEntry")
     }
 
-    @NSManaged public var date: Date?
-    @NSManaged public var id: UUID?
+    @NSManaged public var date: Date
+    @NSManaged public var id: UUID
     @NSManaged public var text: String
+    @NSManaged public var page: Page?
 
 }
 
-extension DataEntry: Identifiable {}
+extension DataEntry: Identifiable {
+
+}
