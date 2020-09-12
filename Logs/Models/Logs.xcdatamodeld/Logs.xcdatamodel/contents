@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17189" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Book" representedClassName="Book" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="pages" optional="YES" attributeType="Transformable" customClassName="[Page]"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="pages" attributeType="Transformable" customClassName="[Page]"/>
     </entity>
-    <entity name="DataEntry" representedClassName="DataEntry" syncable="YES" codeGenerationType="class">
+    <entity name="DataEntry" representedClassName="DataEntry" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String" defaultValueString=""/>
     </entity>
     <entity name="Page" representedClassName="Page" syncable="YES" codeGenerationType="class">
-        <attribute name="dataEntries" optional="YES" attributeType="Transformable" customClassName="[DataEntry]"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="dataEntries" attributeType="Transformable" customClassName="[DataEntry]"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
     </entity>
     <elements>
-        <element name="DataEntry" positionX="-36" positionY="9" width="128" height="88"/>
-        <element name="Page" positionX="-9" positionY="63" width="128" height="88"/>
         <element name="Book" positionX="18" positionY="99" width="128" height="88"/>
+        <element name="Page" positionX="-9" positionY="63" width="128" height="88"/>
+        <element name="DataEntry" positionX="54" positionY="126" width="128" height="88"/>
     </elements>
 </model>

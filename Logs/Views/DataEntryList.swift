@@ -12,7 +12,7 @@ struct DataEntryList: View {
     var elements: FetchedResults<DataEntry>
     var body: some View {
         List(elements, id: \.id, rowContent: { entry in
-            entry.text.map(Text.init)
+            Text(entry.text)
         })
         .listStyle(GroupedListStyle())
         .navigationBarTitle("List")
