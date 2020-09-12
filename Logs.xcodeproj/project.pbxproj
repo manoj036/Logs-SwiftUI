@@ -16,11 +16,9 @@
 		919F6676250CACAB00C7ECDA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 919F6675250CACAB00C7ECDA /* .swiftlint.yml */; };
 		91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */; };
 		91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */; };
-		91C1FC31245DC3A600D54CC1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC30245DC3A600D54CC1 /* RootViewController.swift */; };
 		91C1FC36245DC3A800D54CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC35245DC3A800D54CC1 /* Assets.xcassets */; };
 		91C1FC39245DC3A800D54CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */; };
 		91C1FC5E245DDA0300D54CC1 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 91C1FC5D245DDA0300D54CC1 /* EasyPeasy */; };
-		91C1FC60245DE2B700D54CC1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC5F245DE2B700D54CC1 /* RootView.swift */; };
 		91C1FC64245FD72600D54CC1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC63245FD72600D54CC1 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +32,9 @@
 		91C1FC29245DC3A600D54CC1 /* Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91C1FC30245DC3A600D54CC1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		91C1FC35245DC3A800D54CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C1FC38245DC3A800D54CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C1FC3A245DC3A800D54CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91C1FC5F245DE2B700D54CC1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		91C1FC63245FD72600D54CC1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,9 +59,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		917A3CBD250CC2E700B5A26B /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		917C1CF82504CE740010C607 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				91C1FC63245FD72600D54CC1 /* BaseView.swift */,
 				917C1CF92504CE840010C607 /* FloatingActionButton.swift */,
 				917C1CFD2504D2AC0010C607 /* DataEntryList.swift */,
 				917C1D012504E0B50010C607 /* AddEntryView.swift */,
@@ -92,18 +97,15 @@
 		91C1FC2B245DC3A600D54CC1 /* Logs */ = {
 			isa = PBXGroup;
 			children = (
-				917A3CBA250CBF9500B5A26B /* Models */,
+				917A3CBD250CC2E700B5A26B /* Environment */,
 				919F6675250CACAB00C7ECDA /* .swiftlint.yml */,
+				917A3CBA250CBF9500B5A26B /* Models */,
 				917C1CF82504CE740010C607 /* Views */,
 				91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */,
 				91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */,
-				91C1FC5F245DE2B700D54CC1 /* RootView.swift */,
-				91C1FC30245DC3A600D54CC1 /* RootViewController.swift */,
-				91C1FC63245FD72600D54CC1 /* BaseView.swift */,
 				91C1FC35245DC3A800D54CC1 /* Assets.xcassets */,
 				91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */,
 				91C1FC3A245DC3A800D54CC1 /* Info.plist */,
-				917C1CFB2504CF3C0010C607 /* ViewGenerator.swift */,
 			);
 			path = Logs;
 			sourceTree = "<group>";
@@ -211,10 +213,8 @@
 			files = (
 				917C1CFC2504CF3C0010C607 /* ViewGenerator.swift in Sources */,
 				917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */,
-				91C1FC60245DE2B700D54CC1 /* RootView.swift in Sources */,
 				917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */,
 				917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */,
-				91C1FC31245DC3A600D54CC1 /* RootViewController.swift in Sources */,
 				91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */,
 				917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */,
 				91C1FC64245FD72600D54CC1 /* BaseView.swift in Sources */,
