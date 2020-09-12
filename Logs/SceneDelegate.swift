@@ -22,7 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let context = persistentContainer.viewContext
         let view = BookView().environment(\.managedObjectContext, context)
-        window?.rootViewController = UIHostingController(rootView: view)
+        window?.rootViewController = UIHostingController(
+            rootView: NavigationView { view }
+        )
         window?.makeKeyAndVisible()
     }
 

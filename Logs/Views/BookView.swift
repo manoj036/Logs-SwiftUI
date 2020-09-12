@@ -33,38 +33,36 @@ struct BookView: View {
             set: { _ in page = nil }
         )
 
-        NavigationView {
-            VStack {
-                NavigationLink(destination: pageView(for: page), isActive: pushChild) {}
-                ViewGenerator.addFAB(
-                    to: AnyView(
-                        List(pages, id: \.id, rowContent: { entry in
-                            HStack {
-                                Text(entry.name)
-                            }.onTapGesture {
-                                page = entry
-                            }
-                        })
-                        .listStyle(GroupedListStyle())
-                        .navigationBarTitle("Book")
-                    ),
-                    side: 60,
-                    action: {
-                        showAddEntryAlert = true
-                    }
-                ).popover(isPresented: $showAddEntryAlert, content: {
-                    AddEntryView { text in
-                        if let text = text {
-                            let entry = Page(context: moc)
-                            entry.id = UUID()
-                            entry.date = Date()
-                            entry.name = text
-                            saveContext()
+        VStack {
+            NavigationLink(destination: pageView(for: page), isActive: pushChild) {}
+            ViewGenerator.addFAB(
+                to: AnyView(
+                    List(pages, id: \.id, rowContent: { entry in
+                        HStack {
+                            Text(entry.name)
+                        }.onTapGesture {
+                            page = entry
                         }
-                        showAddEntryAlert = false
+                    })
+                    .listStyle(GroupedListStyle())
+                    .navigationBarTitle("Book")
+                ),
+                side: 60,
+                action: {
+                    showAddEntryAlert = true
+                }
+            ).popover(isPresented: $showAddEntryAlert, content: {
+                AddEntryView { text in
+                    if let text = text {
+                        let entry = Page(context: moc)
+                        entry.id = UUID()
+                        entry.date = Date()
+                        entry.name = text
+                        saveContext()
                     }
-                })
-            }
+                    showAddEntryAlert = false
+                }
+            })
         }
     }
 
