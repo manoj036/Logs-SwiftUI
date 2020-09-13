@@ -1,0 +1,29 @@
+name: Logs
+options:
+  bundleIdPrefix: com.manoj
+  xcodeVersion: "12.0"
+targets:
+  Logs:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: Logs
+  LogsTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: LogsTests
+    dependencies:
+      - target: Logs
+      - { sdk: XCTest.framework }
+  LogsUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: LogsUITests
+    dependencies:
+      - target: Logs
+      - { sdk: XCTest.framework }
