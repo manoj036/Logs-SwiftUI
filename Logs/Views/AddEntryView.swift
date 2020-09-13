@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import Introspect
 
 struct AddEntryView: View {
     @State var title: String = ""
