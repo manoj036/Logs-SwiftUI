@@ -22,13 +22,13 @@ class LogsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testCanAddNewBook() {
+    func testCreateBook() {
         let app = XCUIApplication()
         app.launch()
         app.addInfo("add note")
     }
 
-    func testCanAddNewNoteAndGoBack() {
+    func testCreateBookAndNote() {
         let app = XCUIApplication()
 
         app.launch()
