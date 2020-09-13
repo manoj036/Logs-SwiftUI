@@ -3,6 +3,7 @@
 all: setup gen_project
 
 setup:
+		brew install mint
 		mint install yonaskolb/xcodegen
 
 gen_project:
