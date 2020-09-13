@@ -10,7 +10,7 @@ import SwiftUI
 import CoreData
 
 struct PageView: View {
-    @Environment(\.managedObjectContext) var managedObjectContext
+    @Environment(\.managedObjectContext) var moc
     var page: Page?
 
     var notes: [DataEntry] {
@@ -28,23 +28,19 @@ struct PageView: View {
         }.popover(isPresented: $showAddEntryAlert, content: {
             AddEntryView { text in
                 if let text = text {
-                    let entry = DataEntry(context: managedObjectContext)
-                    entry.text = text
-                    entry.id = UUID()
-                    entry.date = Date()
-                    entry.page = page
-                    saveContext()
+                    saveEntry(text)
                 }
                 self.showAddEntryAlert = false
             }
         }).navigationBarTitle("Books > " + (page?.name ?? ""))
     }
 
-    func saveContext() {
-        do {
-            try managedObjectContext.save()
-        } catch {
-            print("Error saving managed object context: \(error)")
-        }
+    private func saveEntry(_ text: String) {
+        let entry = DataEntry(context: moc)
+        entry.text = text
+        entry.id = UUID()
+        entry.date = Date()
+        entry.page = page
+        try? moc.save()
     }
 }

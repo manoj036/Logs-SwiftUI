@@ -17,22 +17,13 @@ struct BookView: View {
 
     @Environment(\.managedObjectContext) var moc
     @State private var showAddEntryAlert = false
-    @State var displayedPage: Page?
-
-    var pageView: some View {
-        PageView(page: displayedPage).environment(\.managedObjectContext, moc)
-    }
 
     var body: some View {
-        let pushChild = Binding<Bool>(get: { displayedPage != nil }, set: { if !$0 {  displayedPage = nil }})
-
         ZStack {
-            NavigationLink(destination: pageView, isActive: pushChild) {}
             List(pages, id: \.id, rowContent: { entry in
-                HStack {
+                let pageView = PageView(page: entry).environment(\.managedObjectContext, moc)
+                NavigationLink(destination: pageView) {
                     Text(entry.name)
-                }.onTapGesture {
-                    displayedPage = entry
                 }
             })
             .listStyle(GroupedListStyle())
@@ -43,22 +34,18 @@ struct BookView: View {
         }.popover(isPresented: $showAddEntryAlert, content: {
             AddEntryView { text in
                 if let text = text {
-                    let entry = Page(context: moc)
-                    entry.id = UUID()
-                    entry.date = Date()
-                    entry.name = text
-                    saveContext()
+                    saveBook(text)
                 }
                 showAddEntryAlert = false
             }
         })
     }
 
-    func saveContext() {
-        do {
-            try moc.save()
-        } catch {
-            print("Error saving managed object context: \(error)")
-        }
+    private func saveBook(_ name: String) {
+        let entry = Page(context: moc)
+        entry.id = UUID()
+        entry.date = Date()
+        entry.name = name
+        try? moc.save()
     }
 }
