@@ -22,7 +22,7 @@ struct AddEntryView: View {
                     onCommit: {
                         self.valueChanged?(self.title)
                     }
-                )
+                ).accessibility(identifier: "textfield_entry")
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(headerText)

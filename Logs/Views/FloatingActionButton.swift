@@ -23,10 +23,13 @@ struct FloatingActionButton: View {
                             .font(Font.system(size: diameter/2))
                             .frame(width: diameter, height: diameter, alignment: .center)
                             .foregroundColor(.white)
-                }).background(Color.blue)
-                    .cornerRadius(diameter/2)
-                    .padding(.all, 16)
-                    .shadow(color: Color.black.opacity(0.3), radius: 4, x: 3, y: 3)
+                    }
+                )
+                .accessibility(identifier: "fab_add")
+                .background(Color.blue)
+                .cornerRadius(diameter/2)
+                .padding(.all, 16)
+                .shadow(color: Color.black.opacity(0.3), radius: 4, x: 3, y: 3)
             }
         }
     }
