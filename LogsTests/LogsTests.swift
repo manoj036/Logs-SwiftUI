@@ -19,7 +19,7 @@ class LogsTests: XCTestCase {
     }
 
     func testExample() throws {
-        XCTAssertEqual(1+1, 3)
+        XCTAssertEqual(1+1, 2)
     }
 
     func testPerformanceExample() throws {
