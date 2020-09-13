@@ -8,5 +8,5 @@ Uses
 - XcodeGen for generating project files.
 
 Project setup:
-- make all
+- `make all`
 - Build and run
