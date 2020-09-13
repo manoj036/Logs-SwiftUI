@@ -22,7 +22,7 @@ jobs:
           scheme: Logs
           filetype_parameter: project
           file_to_build: Logs.xcodeproj
-          platform: iOS
+          platform: iOS Simulator
           device: iPhone 11
         run: |
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
