@@ -40,10 +40,11 @@ struct PageView: View {
                     ForEach(notes, id: \.id) {  entry in
                         Text(entry.text)
                     }.onDelete { indexSet in
-                        indexSet.forEach { index in
-                            moc.delete(notes[index])
-                            try? moc.save()
+                        let elements = indexSet.map { notes[$0] }
+                        elements.forEach {
+                            moc.delete($0)
                         }
+                        try? moc.save()
                     }
                 }
                 .listStyle(GroupedListStyle())

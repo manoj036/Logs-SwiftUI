@@ -26,6 +26,12 @@ struct BookView: View {
                     NavigationLink(destination: pageView) {
                         Text(entry.name)
                     }
+                }.onDelete { indexSet in
+                    let elements = indexSet.map { pages[$0] }
+                    elements.forEach {
+                        moc.delete($0)
+                    }
+                    try? moc.save()
                 }
             }
             .listStyle(GroupedListStyle())
