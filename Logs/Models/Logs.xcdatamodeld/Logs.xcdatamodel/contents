@@ -10,10 +10,10 @@
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DataEntry" inverseName="page" inverseEntity="DataEntry"/>
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DataEntry" inverseName="page" inverseEntity="DataEntry"/>
     </entity>
     <elements>
-        <element name="Page" positionX="108" positionY="207" width="128" height="103"/>
-        <element name="DataEntry" positionX="54" positionY="126" width="128" height="103"/>
+        <element name="DataEntry" positionX="-121.828125" positionY="178.3203125" width="128" height="103"/>
+        <element name="Page" positionX="-299.546875" positionY="114.93359375" width="128" height="103"/>
     </elements>
 </model>

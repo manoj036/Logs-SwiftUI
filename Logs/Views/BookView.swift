@@ -20,26 +20,31 @@ struct BookView: View {
 
     var body: some View {
         ZStack {
-            List {
-                ForEach(pages, id: \.id) { entry in
-                    let pageView = PageView(page: entry).environment(\.managedObjectContext, moc)
-                    NavigationLink(destination: pageView) {
-                        Text(entry.name)
+            if pages.isEmpty {
+                EmptyListView()
+            } else {
+                List {
+                    ForEach(pages, id: \.self) { entry in
+                        let pageView = PageView(page: entry).environment(\.managedObjectContext, moc)
+                        NavigationLink(destination: pageView) {
+                            Text(entry.name)
+                        }
+                    }.onDelete { indexSet in
+                        let elements = indexSet.map { pages[$0] }
+                        elements.forEach {
+                            moc.delete($0)
+                        }
+                        try? moc.save()
                     }
-                }.onDelete { indexSet in
-                    let elements = indexSet.map { pages[$0] }
-                    elements.forEach {
-                        moc.delete($0)
-                    }
-                    try? moc.save()
                 }
+                .listStyle(GroupedListStyle())
             }
-            .listStyle(GroupedListStyle())
-            .navigationBarTitle("Pages")
             FloatingActionButton(diameter: 60, action: {
                 showAddEntryAlert = true
             })
-        }.popover(isPresented: $showAddEntryAlert, content: {
+        }
+        .navigationBarTitle("Pages")
+        .popover(isPresented: $showAddEntryAlert, content: {
             AddEntryView(headerText: "New Page", placeholder: "Chapter 0 📘") { text in
                 if let text = text {
                     saveBook(text)
@@ -47,6 +52,7 @@ struct BookView: View {
                 showAddEntryAlert = false
             }
         })
+
     }
 
     private func saveBook(_ name: String) {

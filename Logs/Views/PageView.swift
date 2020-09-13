@@ -27,17 +27,10 @@ struct PageView: View {
     var body: some View {
         ZStack {
             if notes.isEmpty {
-                VStack {
-                    Image(systemName: "book")
-                        .font(.largeTitle)
-                        .foregroundColor(.blue)
-                    Text("No notes to show.\n Add them easily by clicking on the `+` icon, present on the bottom left corner.")
-                        .multilineTextAlignment(.center)
-                        .padding(.all, 16)
-                }
+                EmptyListView()
             } else {
                 List {
-                    ForEach(notes, id: \.id) {  entry in
+                    ForEach(notes, id: \.self) {  entry in
                         Text(entry.text)
                     }.onDelete { indexSet in
                         let elements = indexSet.map { notes[$0] }
@@ -69,5 +62,11 @@ struct PageView: View {
         entry.date = Date()
         entry.page = page
         try? moc.save()
+    }
+}
+
+struct PageView_Previews: PreviewProvider {
+    static var previews: some View {
+        PageView(page: Page())
     }
 }
