@@ -6,7 +6,6 @@ setup:
 		mint install yonaskolb/xcodegen
 
 gen_project:
-		echo "hello"
 		xcodegen generate
 
 .DEFAULT_GOAL := gen_project
