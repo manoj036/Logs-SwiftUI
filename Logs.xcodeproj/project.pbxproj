@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		912E9738250CDC2900C45DDB /* DataEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9734250CDC2900C45DDB /* DataEntry+CoreDataClass.swift */; };
-		912E9739250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9735250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift */; };
-		912E973A250CDC2900C45DDB /* Page+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9736250CDC2900C45DDB /* Page+CoreDataClass.swift */; };
-		912E973B250CDC2900C45DDB /* Page+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9737250CDC2900C45DDB /* Page+CoreDataProperties.swift */; };
 		912E973F250DE79400C45DDB /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E973E250DE79400C45DDB /* PageView.swift */; };
+		912E9744250DE90700C45DDB /* Page+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9740250DE90700C45DDB /* Page+CoreDataProperties.swift */; };
+		912E9745250DE90700C45DDB /* DataEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9741250DE90700C45DDB /* DataEntry+CoreDataClass.swift */; };
+		912E9746250DE90700C45DDB /* DataEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9742250DE90700C45DDB /* DataEntry+CoreDataProperties.swift */; };
+		912E9747250DE90700C45DDB /* Page+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9743250DE90700C45DDB /* Page+CoreDataClass.swift */; };
 		917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */; };
 		917A3CCB250CD3AC00B5A26B /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CCA250CD3AC00B5A26B /* BookView.swift */; };
 		917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF92504CE840010C607 /* FloatingActionButton.swift */; };
@@ -26,11 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		912E9734250CDC2900C45DDB /* DataEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		912E9735250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		912E9736250CDC2900C45DDB /* Page+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		912E9737250CDC2900C45DDB /* Page+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		912E973E250DE79400C45DDB /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		912E9740250DE90700C45DDB /* Page+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		912E9741250DE90700C45DDB /* DataEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		912E9742250DE90700C45DDB /* DataEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		912E9743250DE90700C45DDB /* Page+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataClass.swift"; sourceTree = "<group>"; };
 		917A3CB8250CB09C00B5A26B /* Logs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logs.xcdatamodel; sourceTree = "<group>"; };
 		917A3CCA250CD3AC00B5A26B /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		917C1CF92504CE840010C607 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
@@ -60,10 +60,10 @@
 		917A3CBA250CBF9500B5A26B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				912E9734250CDC2900C45DDB /* DataEntry+CoreDataClass.swift */,
-				912E9735250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift */,
-				912E9736250CDC2900C45DDB /* Page+CoreDataClass.swift */,
-				912E9737250CDC2900C45DDB /* Page+CoreDataProperties.swift */,
+				912E9741250DE90700C45DDB /* DataEntry+CoreDataClass.swift */,
+				912E9742250DE90700C45DDB /* DataEntry+CoreDataProperties.swift */,
+				912E9743250DE90700C45DDB /* Page+CoreDataClass.swift */,
+				912E9740250DE90700C45DDB /* Page+CoreDataProperties.swift */,
 				917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */,
 			);
 			path = Models;
@@ -221,12 +221,12 @@
 			files = (
 				917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */,
 				917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */,
-				912E973B250CDC2900C45DDB /* Page+CoreDataProperties.swift in Sources */,
+				912E9744250DE90700C45DDB /* Page+CoreDataProperties.swift in Sources */,
+				912E9747250DE90700C45DDB /* Page+CoreDataClass.swift in Sources */,
+				912E9745250DE90700C45DDB /* DataEntry+CoreDataClass.swift in Sources */,
 				917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */,
 				912E973F250DE79400C45DDB /* PageView.swift in Sources */,
-				912E973A250CDC2900C45DDB /* Page+CoreDataClass.swift in Sources */,
-				912E9739250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift in Sources */,
-				912E9738250CDC2900C45DDB /* DataEntry+CoreDataClass.swift in Sources */,
+				912E9746250DE90700C45DDB /* DataEntry+CoreDataProperties.swift in Sources */,
 				91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */,
 				917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */,
 				917A3CCB250CD3AC00B5A26B /* BookView.swift in Sources */,
