@@ -11,10 +11,10 @@ import CoreData
 
 struct PageView: View {
     @Environment(\.managedObjectContext) var moc
-    var page: Page?
+    var page: Page
 
     var notes: [DataEntry] {
-        page?.entriesArray ?? []
+        page.entriesArray
     }
 
     @State private var showAddEntryAlert = false
@@ -32,7 +32,7 @@ struct PageView: View {
                 }
                 self.showAddEntryAlert = false
             }
-        }).navigationBarTitle("Books > " + (page?.name ?? ""))
+        }).navigationBarTitle(page.name)
     }
 
     private func saveEntry(_ text: String) {
