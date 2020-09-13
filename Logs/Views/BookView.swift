@@ -12,7 +12,7 @@ import CoreData
 struct BookView: View {
     @FetchRequest(
         entity: Page.entity(),
-        sortDescriptors: []
+        sortDescriptors: [NSSortDescriptor(keyPath: \Page.date, ascending: false)]
     ) var pages: FetchedResults<Page>
 
     @Environment(\.managedObjectContext) var moc

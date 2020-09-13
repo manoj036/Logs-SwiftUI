@@ -33,7 +33,6 @@ struct PageView: View {
                     entry.id = UUID()
                     entry.date = Date()
                     entry.page = page
-
                     saveContext()
                 }
                 self.showAddEntryAlert = false
