@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		912E973F250DE79400C45DDB /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E973E250DE79400C45DDB /* PageView.swift */; };
-		912E9744250DE90700C45DDB /* Page+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9740250DE90700C45DDB /* Page+CoreDataProperties.swift */; };
 		912E9745250DE90700C45DDB /* DataEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9741250DE90700C45DDB /* DataEntry+CoreDataClass.swift */; };
 		912E9746250DE90700C45DDB /* DataEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9742250DE90700C45DDB /* DataEntry+CoreDataProperties.swift */; };
-		912E9747250DE90700C45DDB /* Page+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9743250DE90700C45DDB /* Page+CoreDataClass.swift */; };
 		912E974F250DEA9900C45DDB /* LogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E974E250DEA9900C45DDB /* LogsTests.swift */; };
+		912E9758250E130000C45DDB /* Page+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9756250E130000C45DDB /* Page+CoreDataClass.swift */; };
+		912E9759250E130000C45DDB /* Page+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9757250E130000C45DDB /* Page+CoreDataProperties.swift */; };
 		917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */; };
 		917A3CCB250CD3AC00B5A26B /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CCA250CD3AC00B5A26B /* BookView.swift */; };
 		917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF92504CE840010C607 /* FloatingActionButton.swift */; };
-		917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CFD2504D2AC0010C607 /* DataEntryList.swift */; };
 		917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1D012504E0B50010C607 /* AddEntryView.swift */; };
 		919F6676250CACAB00C7ECDA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 919F6675250CACAB00C7ECDA /* .swiftlint.yml */; };
 		91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2C245DC3A600D54CC1 /* AppDelegate.swift */; };
@@ -37,17 +36,16 @@
 
 /* Begin PBXFileReference section */
 		912E973E250DE79400C45DDB /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
-		912E9740250DE90700C45DDB /* Page+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		912E9741250DE90700C45DDB /* DataEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		912E9742250DE90700C45DDB /* DataEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		912E9743250DE90700C45DDB /* Page+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataClass.swift"; sourceTree = "<group>"; };
 		912E974C250DEA9900C45DDB /* LogsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		912E974E250DEA9900C45DDB /* LogsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsTests.swift; sourceTree = "<group>"; };
 		912E9750250DEA9900C45DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912E9756250E130000C45DDB /* Page+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		912E9757250E130000C45DDB /* Page+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		917A3CB8250CB09C00B5A26B /* Logs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logs.xcdatamodel; sourceTree = "<group>"; };
 		917A3CCA250CD3AC00B5A26B /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		917C1CF92504CE840010C607 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
-		917C1CFD2504D2AC0010C607 /* DataEntryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryList.swift; sourceTree = "<group>"; };
 		917C1D012504E0B50010C607 /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
 		919F6675250CACAB00C7ECDA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		91C1FC29245DC3A600D54CC1 /* Logs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,10 +86,10 @@
 		917A3CBA250CBF9500B5A26B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				912E9756250E130000C45DDB /* Page+CoreDataClass.swift */,
+				912E9757250E130000C45DDB /* Page+CoreDataProperties.swift */,
 				912E9741250DE90700C45DDB /* DataEntry+CoreDataClass.swift */,
 				912E9742250DE90700C45DDB /* DataEntry+CoreDataProperties.swift */,
-				912E9743250DE90700C45DDB /* Page+CoreDataClass.swift */,
-				912E9740250DE90700C45DDB /* Page+CoreDataProperties.swift */,
 				917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */,
 			);
 			path = Models;
@@ -109,7 +107,6 @@
 			children = (
 				912E973E250DE79400C45DDB /* PageView.swift */,
 				917C1CF92504CE840010C607 /* FloatingActionButton.swift */,
-				917C1CFD2504D2AC0010C607 /* DataEntryList.swift */,
 				917C1D012504E0B50010C607 /* AddEntryView.swift */,
 				917A3CCA250CD3AC00B5A26B /* BookView.swift */,
 			);
@@ -287,14 +284,13 @@
 			files = (
 				917C1D022504E0B50010C607 /* AddEntryView.swift in Sources */,
 				917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */,
-				912E9744250DE90700C45DDB /* Page+CoreDataProperties.swift in Sources */,
-				912E9747250DE90700C45DDB /* Page+CoreDataClass.swift in Sources */,
+				912E9759250E130000C45DDB /* Page+CoreDataProperties.swift in Sources */,
 				912E9745250DE90700C45DDB /* DataEntry+CoreDataClass.swift in Sources */,
+				912E9758250E130000C45DDB /* Page+CoreDataClass.swift in Sources */,
 				917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */,
 				912E973F250DE79400C45DDB /* PageView.swift in Sources */,
 				912E9746250DE90700C45DDB /* DataEntry+CoreDataProperties.swift in Sources */,
 				91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */,
-				917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */,
 				917A3CCB250CD3AC00B5A26B /* BookView.swift in Sources */,
 				91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */,
 			);

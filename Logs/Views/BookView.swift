@@ -12,7 +12,7 @@ import CoreData
 struct BookView: View {
     @FetchRequest(
         entity: Page.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Page.date, ascending: false)]
+        sortDescriptors: [NSSortDescriptor(keyPath: \Page.date, ascending: true)]
     ) var pages: FetchedResults<Page>
 
     @Environment(\.managedObjectContext) var moc
@@ -20,12 +20,14 @@ struct BookView: View {
 
     var body: some View {
         ZStack {
-            List(pages, id: \.id, rowContent: { entry in
-                let pageView = PageView(page: entry).environment(\.managedObjectContext, moc)
-                NavigationLink(destination: pageView) {
-                    Text(entry.name)
+            List {
+                ForEach(pages, id: \.id) { entry in
+                    let pageView = PageView(page: entry).environment(\.managedObjectContext, moc)
+                    NavigationLink(destination: pageView) {
+                        Text(entry.name)
+                    }
                 }
-            })
+            }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Pages")
             FloatingActionButton(diameter: 60, action: {
