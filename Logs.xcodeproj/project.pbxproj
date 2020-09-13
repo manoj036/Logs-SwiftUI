@@ -11,6 +11,7 @@
 		912E9739250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9735250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift */; };
 		912E973A250CDC2900C45DDB /* Page+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9736250CDC2900C45DDB /* Page+CoreDataClass.swift */; };
 		912E973B250CDC2900C45DDB /* Page+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E9737250CDC2900C45DDB /* Page+CoreDataProperties.swift */; };
+		912E973F250DE79400C45DDB /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E973E250DE79400C45DDB /* PageView.swift */; };
 		917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CB7250CB09C00B5A26B /* Logs.xcdatamodeld */; };
 		917A3CCB250CD3AC00B5A26B /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A3CCA250CD3AC00B5A26B /* BookView.swift */; };
 		917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C1CF92504CE840010C607 /* FloatingActionButton.swift */; };
@@ -22,7 +23,6 @@
 		91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC2E245DC3A600D54CC1 /* SceneDelegate.swift */; };
 		91C1FC36245DC3A800D54CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC35245DC3A800D54CC1 /* Assets.xcassets */; };
 		91C1FC39245DC3A800D54CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C1FC37245DC3A800D54CC1 /* LaunchScreen.storyboard */; };
-		91C1FC64245FD72600D54CC1 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C1FC63245FD72600D54CC1 /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +30,7 @@
 		912E9735250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataEntry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		912E9736250CDC2900C45DDB /* Page+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		912E9737250CDC2900C45DDB /* Page+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Page+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		912E973E250DE79400C45DDB /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		917A3CB8250CB09C00B5A26B /* Logs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logs.xcdatamodel; sourceTree = "<group>"; };
 		917A3CCA250CD3AC00B5A26B /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		917C1CF92504CE840010C607 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		91C1FC35245DC3A800D54CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C1FC38245DC3A800D54CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C1FC3A245DC3A800D54CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91C1FC63245FD72600D54CC1 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		917C1CF82504CE740010C607 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				91C1FC63245FD72600D54CC1 /* PageView.swift */,
+				912E973E250DE79400C45DDB /* PageView.swift */,
 				917C1CF92504CE840010C607 /* FloatingActionButton.swift */,
 				917C1CFD2504D2AC0010C607 /* DataEntryList.swift */,
 				917C1D012504E0B50010C607 /* AddEntryView.swift */,
@@ -223,12 +223,12 @@
 				917C1CFA2504CE840010C607 /* FloatingActionButton.swift in Sources */,
 				912E973B250CDC2900C45DDB /* Page+CoreDataProperties.swift in Sources */,
 				917A3CB9250CB09C00B5A26B /* Logs.xcdatamodeld in Sources */,
+				912E973F250DE79400C45DDB /* PageView.swift in Sources */,
 				912E973A250CDC2900C45DDB /* Page+CoreDataClass.swift in Sources */,
 				912E9739250CDC2900C45DDB /* DataEntry+CoreDataProperties.swift in Sources */,
 				912E9738250CDC2900C45DDB /* DataEntry+CoreDataClass.swift in Sources */,
 				91C1FC2D245DC3A600D54CC1 /* AppDelegate.swift in Sources */,
 				917C1CFE2504D2AC0010C607 /* DataEntryList.swift in Sources */,
-				91C1FC64245FD72600D54CC1 /* PageView.swift in Sources */,
 				917A3CCB250CD3AC00B5A26B /* BookView.swift in Sources */,
 				91C1FC2F245DC3A600D54CC1 /* SceneDelegate.swift in Sources */,
 			);

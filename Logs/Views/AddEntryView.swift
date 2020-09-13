@@ -11,12 +11,14 @@ import Introspect
 
 struct AddEntryView: View {
     @State var title: String = ""
+    var headerText = "Entry"
+    var placeholder = "Enter the field info 📝"
     var valueChanged: ((String?) -> Void)?
     var body: some View {
         NavigationView {
             List {
                 TextField(
-                    "Enter Field Name 📝",
+                    placeholder,
                     text: $title,
                     onCommit: {
                         self.valueChanged?(self.title)
@@ -24,7 +26,7 @@ struct AddEntryView: View {
                 )
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Entry")
+            .navigationBarTitle(headerText)
             .navigationBarItems(
                 leading: Button(
                     action: {

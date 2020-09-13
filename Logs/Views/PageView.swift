@@ -26,7 +26,7 @@ struct PageView: View {
                 self.showAddEntryAlert = true
             })
         }.popover(isPresented: $showAddEntryAlert, content: {
-            AddEntryView { text in
+            AddEntryView(headerText: "New Entry", placeholder: "Buy Onions 🧅 📝") { text in
                 if let text = text {
                     saveEntry(text)
                 }

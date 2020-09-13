@@ -27,12 +27,12 @@ struct BookView: View {
                 }
             })
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Books")
+            .navigationBarTitle("Pages")
             FloatingActionButton(diameter: 60, action: {
                 showAddEntryAlert = true
             })
         }.popover(isPresented: $showAddEntryAlert, content: {
-            AddEntryView { text in
+            AddEntryView(headerText: "New Page", placeholder: "Chapter 0 📘") { text in
                 if let text = text {
                     saveBook(text)
                 }
